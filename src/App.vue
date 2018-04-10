@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <h1 class="ui huge header">Vue Todo</h1>
+    <h1 class="ui dividing centered header">Vue Todo</h1>
     <create-todo @create-todo="createTodo"></create-todo>
     <todo-list v-bind:todos="todos"></todo-list>
   </div>
@@ -28,6 +28,12 @@ export default {
           id: 1,
           title: "Create a Vue.js Todo List",
           project: "Learning Vue.js",
+          done: false
+        },
+        {
+          id: 2,
+          title: "Take drug test",
+          project: "Precise Systems onboarding",
           done: false
         },
       ]
