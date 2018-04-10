@@ -2,13 +2,14 @@
 
 > A Quick little Vue.js practice project
 
-# Tech Used
+## Tech/framework used
 
-[Vue.js](https://vuejs.org/)
-[SweetAlert](https://sweetalert.js.org/)
-[Semantic UI](https://semantic-ui.com/)
+<b>Built with</b>
+- [Vue.js](https://vuejs.org/)
+- [SweetAlert](https://sweetalert.js.org/)
+- [Semantic UI](https://semantic-ui.com/)
 
-## Install Setup
+## Installation
 
 ``` bash
 # install dependencies
