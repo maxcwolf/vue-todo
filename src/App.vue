@@ -32,8 +32,8 @@ export default {
         },
         {
           id: 2,
-          title: "Take drug test",
-          project: "Precise Systems onboarding",
+          title: "Go to Codestock",
+          project: "Precise Systems",
           done: false
         },
       ]

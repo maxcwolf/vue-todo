@@ -3,22 +3,26 @@
     <!-- JavaScript expressions in Vue are enclosed in double curly brackets. -->
     <p>Completed Tasks: {{todos.filter(todo => todo.done === true).length}}</p>
     <p>Pending Tasks: {{todos.filter(todo => todo.done === false).length}}</p>
-    <todo
-      @delete-todo="deleteTodo"
-      @complete-todo="completeTodo"
-      v-for="todo in todos" :key="todo.id" :todo.sync="todo">
-    </todo>
+    <draggable v-model="todos" :options="{group:'title'}" @start="drag=true" @end="drag=false">
+      <todo
+        @delete-todo="deleteTodo"
+        @complete-todo="completeTodo"
+        v-for="todo in todos" :key="todo.id" :todo.sync="todo">
+      </todo>
+    </draggable>
   </div>
 </template>
 
 <script type = "text/javascript" >
 import Todo from './Todo';
 import sweetalert from 'sweetalert';
+import draggable from 'vuedraggable';
 
 export default {
   props: ["todos"],
   components: {
     Todo,
+    draggable,
   },
   methods: {
     deleteTodo(todo) {
